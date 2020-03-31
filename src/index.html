@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>portfolio</title>
+    <link rel="stylesheet" href="./assets/css/pages/index.css" />
+  </head>
+  <body>
+    <section class="section-outer intro">
+      <header class="intro__header header">
+        <div class="container section-outer">
+          <div class="header__body">
+            <div class="header__avatar avatar">
+              <img src="./assets/images/avatar.png" class="avatar__photo" />
+              <div class="avatar__content">
+                <div class="avatar__name">Altynbek <br />Aidarbekov</div>
+                <div class="avatar__prof">Layout Designer</div>
+              </div>
+            </div>
+
+            <div class="header__burger"><span></span></div>
+
+            <div class="header__nav nav">
+              <a class="nav__item active" href="#work" data-scroll>work</a>
+              <a class="nav__item" href="#about" data-scroll>about me</a>
+              <a class="nav__item" href="#blog" data-scroll>blog</a>
+              <a class="nav__item" href="#contact" data-modal="modal_contact">contact</a>
+              <button class="nav__item nav__item--border" type="button" data-modal="modal_contact">
+                hire me
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="intro__body">
+          <div class="intro__content">
+            <div class="intro__hi">Hello, I’m</div>
+            <div class="intro__name">Altynbek</div>
+            <div class="intro__prof">UI & UX Designer</div>
+            <div class="intro__social social">
+              <a href="#" target="_blank" class="social__link social__link--2">
+                <img
+                  src="./assets/images/icons/behance-white.svg"
+                  alt=""
+                  class="social__icon social__icon--behance"
+                />
+              </a>
+              <a href="#" target="_blank" class="social__link social__link--3">
+                <img src="./assets/images/icons/linkedin-white.svg" alt="" class="social__icon" />
+              </a>
+              <a href="#" target="_blank" class="social__link social__link--4">
+                <img src="./assets/images/icons/facebook-white.svg" alt="" class="social__icon" />
+              </a>
+              <a href="#" target="_blank" class="social__link social__link--5">
+                <img src="./assets/images/icons/instagram-white.svg" alt="" class="social__icon" />
+              </a>
+              <a href="#" target="_blank" class="social__link social__link--6">
+                <img src="./assets/images/icons/twitter-white.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="intro__buttons">
+              <button class="btn" type="button" data-modal="modal_contact">hire me</button>
+              <button class="btn" type="button" data-modal="modal_resume">see my resume</button>
+            </div>
+          </div>
+          <div class="intro__photo-wrapper">
+            <img src="./assets/images/photo.png" class="intro__photo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section-outer projects">
+      <div class="container">
+        <div class="projects__nav nav-projects">
+          <a href="#" class="nav-projects__item" data-filter="all">All</a>
+          <a href="#" class="nav-projects__item" data-filter="app">App</a>
+          <a href="#" class="nav-projects__item" data-filter="website">Website</a>
+          <a href="#" class="nav-projects__item" data-filter="interaction">Interaction</a>
+        </div>
+
+        <div id="works-container" class="projects__works works">
+          <div class="works__item-wrapper" data-category="app">
+            <div class="works__item" data-modal="modal_project">
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-1.jpg" class="works__photo" />
+              </div>
+
+              <div class="works__content">
+                <div class="works__category">App</div>
+                <div class="works__title">
+                  <div class="works__name">project title</div>
+                  <div class="works__date">2019</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="works__item-wrapper" data-category="website">
+            <div class="works__item" data-modal="modal_project">
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-2.jpg" class="works__photo" />
+              </div>
+
+              <div class="works__content">
+                <div class="works__category">Website</div>
+                <div class="works__title">
+                  <div class="works__name">project title</div>
+                  <div class="works__date">2019</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="works__item-wrapper" data-category="app">
+            <div class="works__item" data-modal="modal_project">
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-3.jpg" class="works__photo" />
+              </div>
+
+              <div class="works__content">
+                <div class="works__category">App</div>
+                <div class="works__title">
+                  <div class="works__name">project title</div>
+                  <div class="works__date">2019</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="works__item-wrapper" data-category="website">
+            <div class="works__item" data-modal="modal_project">
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-4.jpg" class="works__photo" />
+              </div>
+
+              <div class="works__content">
+                <div class="works__category">Website</div>
+                <div class="works__title">
+                  <div class="works__name">project title</div>
+                  <div class="works__date">2019</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="works__item-wrapper" data-category="interaction">
+            <div class="works__item" data-modal="modal_project">
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-5.jpg" class="works__photo" />
+              </div>
+
+              <div class="works__content">
+                <div class="works__category">Interaction</div>
+                <div class="works__title">
+                  <div class="works__name">project title</div>
+                  <div class="works__date">2019</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="works__item-wrapper" data-category="app">
+            <div class="works__item" data-modal="modal_project">
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-1.jpg" class="works__photo" />
+              </div>
+
+              <div class="works__content">
+                <div class="works__category">App</div>
+                <div class="works__title">
+                  <div class="works__name">project title</div>
+                  <div class="works__date">2019</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="works__item-wrapper" data-category="interaction">
+            <div class="works__item" data-modal="modal_project">
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-2.jpg" class="works__photo" />
+              </div>
+
+              <div class="works__content">
+                <div class="works__category">Interaction</div>
+                <div class="works__title">
+                  <div class="works__name">project title</div>
+                  <div class="works__date">2019</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="works__item-wrapper" data-category="interaction">
+            <div class="works__item" data-modal="modal_project">
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-3.jpg" class="works__photo" />
+              </div>
+
+              <div class="works__content">
+                <div class="works__category">Interaction</div>
+                <div class="works__title">
+                  <div class="works__name">project title</div>
+                  <div class="works__date">2019</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="works__item-wrapper" data-category="app">
+            <div class="works__item" data-modal="modal_project">
+              <div class="works__photo-wrapper">
+                <img src="./assets/images/projects/project-4.jpg" class="works__photo" />
+              </div>
+
+              <div class="works__content">
+                <div class="works__category">App</div>
+                <div class="works__title">
+                  <div class="works__name">project title</div>
+                  <div class="works__date">2019</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects__btn-wrapper">
+          <button type="button" class="btn btn--small">load more work</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-outer about">
+      <div class="container ">
+        <div class="about__wrapper">
+          <div class="about__photo-wrapper">
+            <img src="./assets/images/designer_photo.png" class="about__photo" />
+          </div>
+          <div class="about__content">
+            <div class="about__title">about me</div>
+            <div class="about__subititle">who am i</div>
+            <div class="about__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu
+                enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet
+                ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a
+                ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis
+                tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci luctus
+                et ultrices posuere cubilia Curae; Donec at mauris porta, ullamcorper sem quis,
+                lobortis sem. Donec sit amet aliquet dui, at varius est. Phasellus porttitor finibus
+                neque vel vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros.
+                Integer tristique posuere purus. Suspendisse placerat, quam vitae ullamcorper
+                sollicitudin, dui ligula molestie massa, sit amet laoreet nibh ex vitae dui. Aenean
+                laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu
+                nunc lobortis pulvinar. Duis viverra, quam non imperdiet scelerisque, urna nunc
+                consequat velit, in mollis erat nibh in libero.
+              </p>
+            </div>
+            <div class="about__buttons">
+              <button class="btn" type="button" data-modal="modal_contact">hire me</button>
+              <a href="#" class="btn" data-modal="modal_resume">see my resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="slider-reviews">
+        <div class="reviews__item-wrapper">
+          <div class="reviews__item review">
+            <div class="review__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu
+                enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet
+                ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a
+                ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis
+                tempus dictum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu
+                enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet
+                ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a
+                ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis
+                tempus dictum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu
+                enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet
+                ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a
+                ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis
+                tempus dictum.
+              </p>
+            </div>
+            <div class="review__profile profile">
+              <div class="profile__photo-wrapper">
+                <img src="./assets/images/avatar.png" class="profile__photo" />
+              </div>
+              <div class="profile__name">Noname #1</div>
+              <div class="profile__organization">Marketing House</div>
+              <div class="profile__rating star-rating">
+                <div class="star-rating__item">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+                <div class="star-rating__item">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+                <div class="star-rating__item">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+                <div class="star-rating__item">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+                <div class="star-rating__item star-rating__item--half">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews__item-wrapper">
+          <div class="reviews__item review">
+            <div class="review__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu
+                enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet
+                ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a
+                ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis
+                tempus dictum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu
+                enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet
+                ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a
+                ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis
+                tempus dictum.
+              </p>
+            </div>
+            <div class="review__profile profile">
+              <div class="profile__photo-wrapper">
+                <img src="./assets/images/avatar.png" class="profile__photo" />
+              </div>
+              <div class="profile__name">Noname #2</div>
+              <div class="profile__organization">Marketing House</div>
+              <div class="profile__rating star-rating">
+                <div class="star-rating__item">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+                <div class="star-rating__item">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+                <div class="star-rating__item">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+                <div class="star-rating__item">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+                <div class="star-rating__item star-rating__item--half">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews__item-wrapper">
+          <div class="reviews__item review">
+            <div class="review__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu
+                enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet
+                ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a
+                ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis
+                tempus dictum.
+              </p>
+            </div>
+            <div class="review__profile profile">
+              <div class="profile__photo-wrapper">
+                <img src="./assets/images/avatar.png" class="profile__photo" />
+              </div>
+              <div class="profile__name">Noname #3</div>
+              <div class="profile__organization">Marketing House</div>
+              <div class="profile__rating star-rating">
+                <div class="star-rating__item">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+                <div class="star-rating__item">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+                <div class="star-rating__item">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+                <div class="star-rating__item">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+                <div class="star-rating__item star-rating__item--half">
+                  <img src="./assets/images/icons/star.svg" alt="" class="star-rating__icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="section-outer articles">
+      <div class="container">
+        <div class="articles__title">read me</div>
+        <div class="articles__subtitle">Sometimes i write something smart</div>
+        <div class="articles__cards">
+          <div class="articles__item card-article">
+            <time class="card-article__date">15<br />june</time>
+            <a href="#" target="_blank" class="card-article__photo-wrapper">
+              <img
+                src="./assets/images/articles/article-1.jpg"
+                alt=""
+                class="card-article__photo"
+              />
+            </a>
+            <a class="card-article__title" href="#" target="_blank">website inspiration</a>
+            <div class="card-article__subtitle">category</div>
+            <div class="card-article__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+              eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+              iaculis eros sem, elementum consequat.
+            </div>
+            <a href="#" target="_blank" class="card-article__btn btn">read more</a>
+          </div>
+          <div class="articles__item card-article">
+            <time class="card-article__date">15<br />june</time>
+            <a href="#" target="_blank" class="card-article__photo-wrapper">
+              <img
+                src="./assets/images/articles/article-2.jpg"
+                alt=""
+                class="card-article__photo"
+              />
+            </a>
+            <a class="card-article__title" href="#" target="_blank">website inspiration</a>
+            <div class="card-article__subtitle">category</div>
+            <div class="card-article__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+              eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+              iaculis eros sem, elementum consequat. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis
+              et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat.
+            </div>
+            <a href="#" target="_blank" class="card-article__btn btn">read more</a>
+          </div>
+          <div class="articles__item card-article">
+            <time class="card-article__date">15<br />june</time>
+            <a href="#" target="_blank" class="card-article__photo-wrapper">
+              <img
+                src="./assets/images/articles/article-3.jpg"
+                alt=""
+                class="card-article__photo"
+              />
+            </a>
+            <a class="card-article__title" href="#" target="_blank">website inspiration</a>
+            <div class="card-article__subtitle">category</div>
+            <div class="card-article__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+              eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+              iaculis eros sem, elementum consequat.
+            </div>
+            <a href="#" target="_blank" class="card-article__btn btn">read more</a>
+          </div>
+        </div>
+        <div class="articles__link-wrapper">
+          <a href="#" target="_blank" class="articles__link">See more posts</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-outer footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__col footer__col--social">
+            <div class="footer__copyright">© 2018 UI43 - Free Templates</div>
+            <div class="footer__social social">
+              <a href="#" target="_blank" class="social__link social__link--footer">
+                <img
+                  src="./assets/images/icons/dribble-gray.svg"
+                  alt=""
+                  class="social__icon social__icon--footer"
+                />
+              </a>
+              <a href="#" target="_blank" class="social__link social__link--footer">
+                <img
+                  src="./assets/images/icons/behance-gray.svg"
+                  alt=""
+                  class="social__icon social__icon--footer social__icon--footer-behance"
+                />
+              </a>
+              <a href="#" target="_blank" class="social__link social__link--footer">
+                <img
+                  src="./assets/images/icons/linkedin-gray.svg"
+                  alt=""
+                  class="social__icon social__icon--footer"
+                />
+              </a>
+              <a href="#" target="_blank" class="social__link social__link--footer">
+                <img
+                  src="./assets/images/icons/facebook-gray.svg"
+                  alt=""
+                  class="social__icon social__icon--footer"
+                />
+              </a>
+              <a href="#" target="_blank" class="social__link social__link--footer">
+                <img
+                  src="./assets/images/icons/instagram-gray.svg"
+                  alt=""
+                  class="social__icon social__icon--footer"
+                />
+              </a>
+              <a href="#" target="_blank" class="social__link social__link--footer">
+                <img
+                  src="./assets/images/icons/twitter-gray.svg"
+                  alt=""
+                  class="social__icon social__icon--footer"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__nav nav">
+              <a class="nav__item nav__item--footer active" href="#work">work</a>
+              <a class="nav__item nav__item--footer" href="#about">about me</a>
+              <a class="nav__item nav__item--footer" href="#blog">blog</a>
+              <a class="nav__item nav__item--footer" data-modal="modal_contact" href="#contact"
+                >contact</a
+              >
+              <button
+                class="nav__item nav__item--footer nav__item--border nav__item--footer-border"
+                type="button"
+                data-modal="modal_contact"
+              >
+                hire me
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-outer modal modal-project" id="modal_project">
+      <div class="modal__inner modal-project__inner">
+        <button class="modal__btn-close" data-close>
+          <img src="./assets/images/icons/cancel.svg" alt="" class="modal__btn-close-icon" />
+        </button>
+
+        <div class="modal-project__slider slider">
+          <div class="modal-project__photo-wrapper">
+            <img
+              src="./assets/images/modals/proj-example/project-1.jpg"
+              alt=""
+              class="modal-project__photo"
+            />
+          </div>
+          <div class="modal-project__photo-wrapper">
+            <img
+              src="./assets/images/modals/proj-example/project-2.jpg"
+              alt=""
+              class="modal-project__photo"
+            />
+          </div>
+          <div class="modal-project__photo-wrapper">
+            <img
+              src="./assets/images/modals/proj-example/project-3.jpg"
+              alt=""
+              class="modal-project__photo"
+            />
+          </div>
+          <div class="modal-project__photo-wrapper">
+            <img
+              src="./assets/images/modals/proj-example/project-4.jpg"
+              alt=""
+              class="modal-project__photo"
+            />
+          </div>
+        </div>
+
+        <div class="modal-project__content-wrapper">
+          <div class="modal-project__content">
+            <div class="modal-project__title">project title</div>
+            <div class="modal-project__subtitle">
+              <div class="modal-project__category">category</div>
+              <div class="modal-project__date">1488</div>
+            </div>
+            <div class="modal-project__client-title">Client</div>
+            <div class="modal-project__client-name">Creative Agency</div>
+            <div class="modal-project__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim
+              eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed
+              iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec
+              tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis
+            </div>
+          </div>
+
+          <nav class="modal-project__nav slider-nav">
+            <button class="modal-project__nav-btn slider-prev">
+              <img
+                src="./assets/images/icons/back-black.svg"
+                alt=""
+                class="modal-project__nav-icon"
+              />
+              previous
+            </button>
+            <button class="modal-project__nav-btn slider-next">
+              next
+
+              <img
+                src="./assets/images/icons/next-black.svg"
+                alt=""
+                class="modal-project__nav-icon"
+              />
+            </button>
+          </nav>
+        </div>
+        <div class="modal-project__modal-project modal-project"></div>
+        <div class="modal-project__slides slide"></div>
+      </div>
+    </section>
+
+    <section class="section-outer modal modal-resume" id="modal_resume">
+      <div class="modal__inner modal-resume__inner">
+        <button class="modal__btn-close" data-close>
+          <img src="./assets/images/icons/cancel.svg" alt="" class="modal__btn-close-icon" />
+        </button>
+
+        <div class="modal-resume__title">
+          resume
+        </div>
+        <div class="modal-resume__btns">
+          <a class="modal-resume__btn btn btn--small btn--gray-border" href="#">download pdf</a>
+          <button class="modal-resume__btn btn btn--small btn--gray-border">print</button>
+        </div>
+        <div class="modal-resume__content">
+          <div class="modal-resume__col modal-resume__col--left">
+            <div class="modal-resume__col-title">experience</div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__block-date">2017 - <b>Present</b></div>
+              <div class="modal-resume__block-prof">Freelancer</div>
+              <div class="modal-resume__block-post">Art Director</div>
+              <div class="modal-resume__block-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non
+                tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit
+                aliquam ligula ut condimentum.
+              </div>
+            </div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__block-date">2017 - <b>Present</b></div>
+              <div class="modal-resume__block-prof">Freelancer</div>
+              <div class="modal-resume__block-post">Art Director</div>
+              <div class="modal-resume__block-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non
+                tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit
+                aliquam ligula ut condimentum.
+              </div>
+            </div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__block-date">2017 - <b>Present</b></div>
+              <div class="modal-resume__block-prof">Freelancer</div>
+              <div class="modal-resume__block-post">Art Director</div>
+              <div class="modal-resume__block-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non
+                tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit
+                aliquam ligula ut condimentum.
+              </div>
+            </div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__block-date">2017 - <b>Present</b></div>
+              <div class="modal-resume__block-prof">Freelancer</div>
+              <div class="modal-resume__block-post">Art Director</div>
+              <div class="modal-resume__block-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis non
+                tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam blandit
+                aliquam ligula ut condimentum.
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-resume__col-line"></div>
+
+          <div class="modal-resume__col">
+            <div class="modal-resume__col-title">education</div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__block-date">2005 - 2010</div>
+              <div class="modal-resume__block-post">UI/UX Design</div>
+              <div class="modal-resume__block-place">LA University, USA</div>
+            </div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__block-date">2005 - 2010</div>
+              <div class="modal-resume__block-post">UI/UX Design</div>
+              <div class="modal-resume__block-place">LA University, USA</div>
+            </div>
+
+            <div class="modal-resume__col-title modal-resume__col-title--block">skills</div>
+            <div class="modal-resume__block">
+              <div class="modal-resume__skill-wrapper">
+                <div class="modal-resume__skills">
+                  <div class="modal-resume__skill-name">UI/UX Design</div>
+                  <div class="modal-resume__skill-name">Illustrator</div>
+                  <div class="modal-resume__skill-name">Photoshop</div>
+                  <div class="modal-resume__skill-name">Sketch</div>
+                </div>
+                <div class="modal-resume__skill-bars">
+                  <span class="modal-resume__skill-bar-item"></span>
+                  <span class="modal-resume__skill-bar-item"></span>
+                  <span class="modal-resume__skill-bar-item"></span>
+                  <span class="modal-resume__skill-bar-item"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-resume__col-title modal-resume__col-title--block">awards</div>
+            <div class="modal-resume__block modal-resume__block--award">
+              <div class="modal-resume__block-date">2016</div>
+              <div class="modal-resume__block-content">
+                <div class="modal-resume__block-prof">
+                  THE BEST APP INTERFACE
+                </div>
+                <div class="modal-resume__block-post">UI/UX Magazine</div>
+                <div class="modal-resume__block-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis
+                  non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam
+                  blandit aliquam ligula ut condimentum.
+                </div>
+              </div>
+            </div>
+            <div class="modal-resume__block modal-resume__block--award">
+              <div class="modal-resume__block-date">2016</div>
+              <div class="modal-resume__block-content">
+                <div class="modal-resume__block-prof">
+                  THE BEST WEBSITE INTERFACE
+                </div>
+                <div class="modal-resume__block-post">UI/UX Magazine</div>
+                <div class="modal-resume__block-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis
+                  non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis felis
+                  non tempor ullamcorper. Pellentesque cursus lectus a pulvinar dapibus. Nullam
+                  blandit aliquam ligula ut condimentum.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn" type="button" data-modal="modal_contact">hire me</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-outer modal modal-contact" id="modal_contact">
+      <div class="modal__inner modal-contact__inner">
+        <button class="modal__btn-close" data-close>
+          <img src="./assets/images/icons/cancel.svg" alt="" class="modal__btn-close-icon" />
+        </button>
+        <div class="modal-contact__content">
+          <div class="modal-contact__title">let's talk!</div>
+          <div class="modal-contact__subtitle">call me or send me a request</div>
+          <a class="modal__btn-contact" href="tel:1488-228-54-27">
+            <img src="./assets/images/icons/phone.svg" alt="" class="modal__btn-contact-icon" />
+            <span class="modal__btn-contact-address">
+              1488-228-54-27
+            </span>
+          </a>
+          <a class="modal__btn-contact" href="mailto:maslo.maslo@maslo.maslo">
+            <img src="./assets/images/icons/mail.svg" alt="" class="modal__btn-contact-icon" />
+            <span class="modal__btn-contact-address">
+              maslo.maslo@maslo.maslo
+            </span>
+          </a>
+
+          <form class="modal-contact__form" action="/" method="POST">
+            <div class="modal-contact__form-block">
+              <label for="input-email" class="modal-contact__form-title">Address e-mail</label>
+              <input
+                id="input-email"
+                class="modal-contact__input"
+                name="email"
+                type="email"
+                placeholder="Address Email"
+              />
+            </div>
+
+            <div class="modal-contact__form-block">
+              <label for="input-req" class="modal-contact__form-title">Request</label>
+              <textarea
+                id="input-req"
+                class="modal-contact__input modal-contact__input--big"
+                name="text"
+                type="text"
+                placeholder="Type your request..."
+              ></textarea>
+            </div>
+            <button class="btn modal-contact__btn" type="submit">send</button>
+          </form>
+        </div>
+
+        <div class="modal-contact__photo-wrapper">
+          <img src="./assets/images/contact.jpg" alt="" class="modal-contact__photo" />
+        </div>
+      </div>
+    </section>
+
+    <div id="modal-bg" class="modal-bg"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <script async src="./assets/js/all.js"></script>
+  </body>
+</html>

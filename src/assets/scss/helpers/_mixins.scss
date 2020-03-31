@@ -1,0 +1,14 @@
+@mixin font-main {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center-abs {
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+::selection {
+  background: lightblue;
+}
+
+// html {
+//   scroll-behavior: smooth;
+// }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.outer {
+  padding: 0 15px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+body {
+  @include font-main;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+p + p {
+  margin-top: 15px;
+}

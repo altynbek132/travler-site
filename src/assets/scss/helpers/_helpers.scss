@@ -1,0 +1,14 @@
+@import '_vars';
+@import '_mixins';
+
+.tac {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
