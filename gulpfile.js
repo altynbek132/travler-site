@@ -66,7 +66,16 @@ gulp.task('svgSprite', function () {
 gulp.task('svg-styled', function () {
   return gulp
     .src(src_assets_folder + 'images/icons-styled/*.svg')
-    .pipe(svgmin())
+    .pipe(imagemin([imagemin.svgo()]))
+    .pipe(
+      svgSprite({
+        mode: {
+          symbol: {
+            sprite: '../sprite.svg',
+          },
+        },
+      }),
+    )
     .pipe(gulp.dest(dist_assets_folder + 'images/icons-styled'));
 });
 
