@@ -1,22 +1,3 @@
-/**
- * A simple Gulp 4 Starter Kit for modern web development.
- *
- * @package @jr-cologne/create-gulp-starter-kit
- * @author JR Cologne <kontakt@jr-cologne.de>
- * @copyright 2020 JR Cologne
- * @license https://github.com/jr-cologne/gulp-starter-kit/blob/master/LICENSE MIT
- * @version v0.10.12-beta
- * @link https://github.com/jr-cologne/gulp-starter-kit GitHub Repository
- * @link https://www.npmjs.com/package/@jr-cologne/create-gulp-starter-kit npm package site
- *
- * ________________________________________________________________________________
- *
- * gulpfile.js
- *
- * The gulp configuration file.
- *
- */
-
 const gulp = require('gulp'),
   del = require('del'),
   sourcemaps = require('gulp-sourcemaps'),
@@ -47,33 +28,6 @@ const gulp = require('gulp'),
   node_modules_folder = './node_modules/',
   dist_node_modules_folder = dist_folder + 'node_modules/',
   node_dependencies = Object.keys(require('./package.json').dependencies || {});
-
-gulp.task('svgClean', function () {
-  return gulp
-    .src([src_assets_folder + 'images/icons/*.svg'])
-    .pipe(plumber())
-    .pipe(
-      cheerio({
-        run: function ($) {
-          $('[fill]').removeAttr('fill');
-          $('[stroke]').removeAttr('stroke');
-          $('[style]').removeAttr('style');
-        },
-        parserOptions: { xmlMode: true },
-      }),
-    )
-    .pipe(replace('&gt;', '>'))
-    .pipe(
-      imagemin([
-        imagemin.svgo({
-          js2svg: {
-            pretty: true,
-          },
-        }),
-      ]),
-    )
-    .pipe(gulp.dest(dist_assets_folder + 'images/svgClean'));
-});
 
 gulp.task('svgSprite', function () {
   return gulp
@@ -107,6 +61,13 @@ gulp.task('svgSprite', function () {
       }),
     )
     .pipe(gulp.dest(dist_assets_folder + 'images'));
+});
+
+gulp.task('svg-styled', function () {
+  return gulp
+    .src(src_assets_folder + 'images/icons-styled/*.svg')
+    .pipe(svgmin())
+    .pipe(gulp.dest(dist_assets_folder + 'images/icons-styled'));
 });
 
 gulp.task('clear', () => del([dist_folder]));
