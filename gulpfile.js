@@ -106,7 +106,7 @@ gulp.task('svgSprite', function () {
         },
       }),
     )
-    .pipe(gulp.dest(dist_assets_folder + 'images/svgSprite'));
+    .pipe(gulp.dest(dist_assets_folder + 'images'));
 });
 
 gulp.task('clear', () => del([dist_folder]));
@@ -124,7 +124,7 @@ gulp.task('html', () => {
 gulp.task('sass-development', () => {
   return gulp
     .src([src_assets_folder + 'sass/**/*.sass', src_assets_folder + 'scss/**/*.scss'], {
-      since: gulp.lastRun('sass'),
+      since: gulp.lastRun('sass-development'),
     })
     .pipe(dependents())
     .pipe(sass())
@@ -170,7 +170,7 @@ gulp.task('sass-production', () => {
 
 gulp.task('js-development', () => {
   return gulp
-    .src([src_assets_folder + 'js/**/*.js'], { since: gulp.lastRun('js') })
+    .src([src_assets_folder + 'js/**/*.js'], { since: gulp.lastRun('js-development') })
     .pipe(
       webpack({
         mode: 'development',
@@ -208,7 +208,7 @@ gulp.task('js-production', () => {
 gulp.task('images-development', () => {
   return gulp
     .src([src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|ico)'], {
-      since: gulp.lastRun('images'),
+      since: gulp.lastRun('images-development'),
     })
     .pipe(plumber())
     .pipe(imagemin([imagemin.mozjpeg(), imagemin.optipng()]))
@@ -218,9 +218,7 @@ gulp.task('images-development', () => {
 
 gulp.task('images-production', () => {
   return gulp
-    .src([src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|ico)'], {
-      since: gulp.lastRun('images'),
-    })
+    .src([src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|ico)'])
     .pipe(plumber())
     .pipe(
       imagemin([
