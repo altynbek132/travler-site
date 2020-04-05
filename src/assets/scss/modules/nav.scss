@@ -1,0 +1,92 @@
+@import '../helpers/helpers';
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    @include anim;
+
+    position: relative;
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    color: #c7c7c7;
+
+    svg {
+      @include anim;
+
+      width: 17px;
+      height: 11px;
+      fill: #c7c7c7;
+    }
+
+    &:hover {
+      color: #58159b;
+
+      svg {
+        fill: #58159b;
+      }
+    }
+
+    & + & {
+      margin-left: 19px;
+    }
+
+    &:nth-child(1) {
+      margin-right: 32px;
+
+      &::after {
+        @include center-abs;
+
+        position: absolute;
+        right: -16px;
+        width: 1px;
+        height: 25px;
+        pointer-events: none;
+        content: '';
+        background-color: #767676;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-left: 0;
+    }
+  }
+
+  &__item-text {
+    margin-right: 10px;
+  }
+
+  &__dropdown-img-txt {
+    font-weight: 700;
+    transform: rotate(90deg);
+  }
+
+  &__input {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px #ccc;
+
+    &::placeholder {
+      font-size: 12px;
+      font-weight: 700;
+      color: #aeaeae;
+    }
+  }
+
+  &__input-icon {
+    @include center-abs;
+
+    position: absolute;
+    right: 13px;
+    z-index: 590;
+
+    svg {
+      width: 23px;
+      height: 23px;
+      fill: #701dbb;
+    }
+  }
+}

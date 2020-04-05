@@ -1,0 +1,54 @@
+@import '../helpers/helpers';
+
+.links {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.16);
+
+  &__item {
+    position: relative;
+    z-index: 500;
+    flex-basis: 16.66667%;
+    padding: 18px 0;
+    text-align: center;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #ebebeb 0%, #fff 80%);
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 101%;
+      height: 5px;
+      content: '';
+      background-color: #6017a3;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid #d4d4d4;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 17px;
+
+    svg {
+      @include anim;
+
+      width: 26px;
+      height: 26px;
+      fill: #7d7d7d;
+    }
+  }
+
+  &__text {
+    @include anim;
+
+    font-family: 'PT Sans';
+    font-size: 17px;
+    font-weight: 700;
+    color: #707070;
+  }
+}
