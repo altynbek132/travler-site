@@ -76,7 +76,7 @@ gulp.task('svg-styled', function () {
         },
       }),
     )
-    .pipe(gulp.dest(dist_assets_folder + 'images/icons-styled'));
+    .pipe(gulp.dest(src_assets_folder + 'images/sprite-styled'));
 });
 
 gulp.task('clear', () => del([dist_folder]));
@@ -229,12 +229,21 @@ gulp.task(
     'js-development',
     'images-development',
     'vendor',
+    'svgSprite',
   ),
 );
 
 gulp.task(
   'build-production',
-  gulp.series('clear', 'html', 'sass-production', 'js-production', 'images-production', 'vendor'),
+  gulp.series(
+    'clear',
+    'html',
+    'sass-production',
+    'js-production',
+    'images-production',
+    'vendor',
+    'svgSprite',
+  ),
 );
 
 gulp.task('dev', gulp.series('html', 'sass-development', 'js-development'));
