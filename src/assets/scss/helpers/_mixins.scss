@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
 @mixin font-main {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', sans-serif;
+}
+
+@mixin font-nav {
+  font-family: 'PT Sans', sans-serif;
 }
 
 @mixin flex-center {
@@ -11,4 +18,8 @@
 @mixin center-abs {
   top: 50%;
   transform: translateY(-50%);
+}
+
+@mixin anim {
+  transition: 0.2s;
 }

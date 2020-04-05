@@ -1,0 +1,6 @@
+mixin links__item(text, svg)
+  a.links__item(href='#')
+    .links__logo
+      svg
+        use(xlink:href=svg)
+    .links__text= text

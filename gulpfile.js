@@ -48,13 +48,13 @@ const gulp = require('gulp'),
   dist_node_modules_folder = dist_folder + 'node_modules/',
   node_dependencies = Object.keys(require('./package.json').dependencies || {});
 
-gulp.task('svgClean', function() {
+gulp.task('svgClean', function () {
   return gulp
     .src([src_assets_folder + 'images/icons/*.svg'])
     .pipe(plumber())
     .pipe(
       cheerio({
-        run: function($) {
+        run: function ($) {
           $('[fill]').removeAttr('fill');
           $('[stroke]').removeAttr('stroke');
           $('[style]').removeAttr('style');
@@ -75,28 +75,90 @@ gulp.task('svgClean', function() {
     .pipe(gulp.dest(src_assets_folder + 'images/svg-clean'));
 });
 
-gulp.task('svgMin', function() {
-  return gulp
-    .src([src_assets_folder + 'images/svg-clean/*.svg'])
-    .pipe(plumber())
-    .pipe(imagemin([imagemin.svgo()]))
-    .pipe(gulp.dest(dist_assets_folder + 'images/icons'));
+gulp.task('svgStyled', function () {
+  return (
+    gulp
+      .src(src_assets_folder + 'images/svg-styled/*.svg')
+      .pipe(
+        svgmin({
+          js2svg: {
+            pretty: true,
+          },
+        }),
+      )
+      .pipe(
+        imagemin([
+          imagemin.svgo({
+            js2svg: {
+              pretty: true,
+            },
+          }),
+        ]),
+      )
+  
+      // .pipe(
+      //   svgSprite({
+      //     mode: {
+      //       symbol: {
+      //         sprite: '../sprite-styled.svg',
+      //         render: {
+      //           // scss: {
+      //           // 	dest:'../../../sass/_sprite.scss',
+      //           // 	template: src_assets_folder + "sass/templates/_sprite_template.scss"
+      //           // }
+      //         },
+      //       },
+      //     },
+      //   }),
+      // )
+      .pipe(gulp.dest(dist_assets_folder + 'images'))
+  );
 });
 
-gulp.task('svgSprite', function() {
-  return gulp
-    .src([src_assets_folder + 'images/to-sprite/**/*.svg'])
-    .pipe(plumber())
-    .pipe(
-      svgSprite({
-        mode: {
-          stack: {
-            sprite: '../sprite.svg',
+gulp.task('svgSprite', function () {
+  return (
+    gulp
+      .src(src_assets_folder + 'images/icons-to-sprite/*.svg')
+      // minify svg
+      .pipe(
+        svgmin({
+          js2svg: {
+            pretty: true,
           },
-        },
-      }),
-    )
-    .pipe(gulp.dest(dist_assets_folder + 'images'))
+        }),
+      )
+      // remove all fill, style and stroke declarations in out shapes
+      .pipe(
+        cheerio({
+          run: function ($) {
+            $('[fill]').removeAttr('fill');
+            $('[stroke]').removeAttr('stroke');
+            $('[style]').removeAttr('style');
+            $('[opacity=-1]').removeAttr('opacity');
+          },
+          parserOptions: { xmlMode: true },
+        }),
+      )
+      // cheerio plugin create unnecessary string '&gt;', so replace it.
+      .pipe(replace('&gt;', '>'))
+      // build svg sprite
+      .pipe(
+        svgSprite({
+          mode: {
+            symbol: {
+              sprite: '../sprite.svg',
+              render: {
+                // scss: {
+                // 	dest:'../../../sass/_sprite.scss',
+                // 	template: src_assets_folder + "sass/templates/_sprite_template.scss"
+                // }
+              },
+            },
+          },
+        }),
+      )
+      .pipe(gulp.dest(dist_assets_folder + 'images'))
+  );
 });
 
 gulp.task('clear', () => del([dist_folder]));
@@ -232,7 +294,23 @@ gulp.task('jsBuild', () => {
     .pipe(gulp.dest(dist_assets_folder + 'js'));
 });
 
-gulp.task('images', () => {
+gulp.task('svg', () => {
+  return gulp
+    .src(
+      [
+        src_assets_folder + 'images/icons/**/*.svg',
+      ],
+      {
+        since: gulp.lastRun('images'),
+      },
+    )
+    .pipe(plumber())
+    .pipe(imagemin([imagemin.mozjpeg(), imagemin.optipng()]))
+    .pipe(gulp.dest(dist_assets_folder + 'images/icons'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('photo', () => {
   return gulp
     .src([src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|ico)'], {
       since: gulp.lastRun('images'),
@@ -242,6 +320,8 @@ gulp.task('images', () => {
     .pipe(gulp.dest(dist_assets_folder + 'images'))
     .pipe(browserSync.stream());
 });
+
+gulp.task('images', gulp.series('photo', 'svg'));
 
 gulp.task('vendor', () => {
   if (node_dependencies.length === 0) {
@@ -269,12 +349,11 @@ gulp.task(
     'clear',
     'html',
     'sass',
-    // 'less',
-    // 'stylus',
+    'svgSprite',
     'js',
     'images',
     'vendor',
-    'svgMin',
+    // 'pug',
   ),
 );
 
@@ -284,12 +363,10 @@ gulp.task(
     'clear',
     'html',
     'sassBuild',
-    // 'less',
-    // 'stylus',
     'jsBuild',
     'images',
     'vendor',
-    'svgMin',
+    // 'pug',
   ),
 );
 

@@ -1,2 +1,64 @@
 @import '../_includes';
 @import '../helpers/helpers';
+
+// todo: placeholder remove
+// what is ~
+
+.intro {
+  height: 100vh;
+
+  &__bg {
+  }
+
+  &__bg-logo {
+  }
+
+  &__header {
+  }
+
+  &__links {
+  }
+
+  &__main-photo {
+  }
+}
+
+.header {
+  &__logo {
+    svg {
+      width: 48px;
+      height: 50px;
+      // background-image: linear-gradient(32deg, rgba(0, 0, 0, 0.3) 0%, rgba(255, 255, 255, 0.3) 100%);
+      box-shadow: 0 1px 0 #fff;
+      // fill: linear-gradient(32deg, #632bb4 0%, #a147d2 100%);
+    }
+  }
+
+  &__nav {
+  }
+}
+
+.nav {
+  &__dropdown-img-txt {
+  }
+
+  &__input {
+  }
+
+  &__input-icon {
+  }
+
+  &__item {
+  }
+}
+
+.links {
+  &__item {
+  }
+
+  &__logo {
+  }
+
+  &__text {
+  }
+}

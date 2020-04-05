@@ -1,4 +1,36 @@
 extends templates/_default
 
 block content
-  
+  section.intro
+    .container
+      .intro__header.header
+        .header__logo
+          svg
+            use(xlink:href='assets/images/sprite.svg#logo')
+        nav.header__nav.nav
+          .nav__item
+            | Quicklinks
+            svg
+              use(xlink:href='assets/images/sprite.svg#map')
+          .nav__item
+            | Select from dropdown
+            .nav__dropdown-img-txt
+              | <> 
+          .nav__item
+            input.nav__input(name='search' type='text' placeholder='Search for somthing here')
+            .nav__input-icon
+              svg
+                use(xlink:href='assets/images/sprite.svg#logo')
+    .intro__links.links
+      +links__item('Travel Guide', 'assets/images/sprite.svg#web')(class="btn")
+      +links__item('Services', 'assets/images/sprite.svg#chat')
+      +links__item('About', 'assets/images/sprite.svg#doc')
+      +links__item('The Tour', 'assets/images/sprite.svg#map')
+      +links__item('How to', 'assets/images/sprite.svg#web')
+      +links__item('Contact', 'assets/images/sprite.svg#doc')
+    .intro__main-photo
+      .intro__bg
+        img(src='assets/images/bg-main.jpg' alt='')
+      .intro__bg-logo
+        svg
+          use(xlink:href='assets/images/sprite.svg#logo')

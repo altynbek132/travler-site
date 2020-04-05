@@ -5,19 +5,31 @@
   padding: 0;
   margin: 0;
   border: 0;
+  // todo: add-boxshadow
+  // outline: none;
+}
+
+*:focus {
+  position: relative;
+  z-index: 500;
   outline: none;
+  // box-shadow: 0 0 5px 3px #64c29e;
 }
 
 ::selection {
   background: lightblue;
 }
 
-// html {
-//   scroll-behavior: smooth;
-// }
+html,
+body {
+  // scroll-behavior: smooth;
+  // ?
+  // height: 100%;
+}
 
 .container {
-  max-width: 1200px;
+  max-width: 980px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -45,10 +57,34 @@ button {
   border: none;
 
   &:focus {
-    outline: none;
   }
 }
 
 p + p {
   margin-top: 15px;
+}
+
+.ibg {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.ibg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
 }
