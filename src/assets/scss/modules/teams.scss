@@ -1,0 +1,110 @@
+@import '../helpers/helpers';
+
+.team {
+  padding-top: 80px;
+  padding-bottom: 46px;
+  background-color: #ebebeb;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+
+    span {
+      flex: 1 1 auto;
+      width: 220px;
+      width: 100%;
+      height: 2px;
+      background-color: #dedede;
+      box-shadow: 0 1px 0 #fff;
+    }
+  }
+
+  &__title-content {
+    flex: 1 0 auto;
+    margin: 0 45px;
+    font-size: 36px;
+    font-weight: 400;
+    color: #717171;
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #717171;
+    text-align: center;
+  }
+
+  &__slider {
+    display: flex;
+    margin: 0 -10px;
+  }
+
+  &__slider-item {
+    flex: 1 1 25%;
+    padding: 0 10px;
+  }
+
+  &__slider-photo {
+    position: relative;
+    z-index: 5;
+    padding-bottom: 96%;
+    margin-bottom: 24px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 5px rgba(76, 76, 76, 0.13);
+
+    img {
+    }
+
+    &::after {
+    }
+  }
+
+  &__slider-bg {
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    z-index: 2;
+    width: 106%;
+    height: 106%;
+    content: '';
+    background-color: #fff;
+    background-color: green;
+    transform: rotate(-4deg);
+  }
+
+  &__slider-link {
+    @include flex-center;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 52px;
+    height: 46px;
+    background-color: #8f33c4;
+
+    svg {
+      width: 26px;
+      height: 18px;
+      fill: #fff;
+    }
+  }
+
+  &__slider-content {
+    font-family: 'PT Sans';
+    color: #7b7b7b;
+  }
+
+  &__slider-name {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.45px;
+  }
+
+  &__slider-prof {
+    font-size: 14px;
+    letter-spacing: 0.35px;
+  }
+}

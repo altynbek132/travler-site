@@ -1,6 +1,9 @@
 @import '../helpers/helpers';
 
 .aspects {
+  display: flex;
+  margin: 0 -14px;
+
   &__item {
     position: relative;
     flex-basis: 33%;
@@ -17,6 +20,14 @@
         background-color: #6d6d6d;
       }
     }
+
+    &--white {
+      &:not(:last-child) {
+        &::after {
+          background-color: #fff;
+        }
+      }
+    }
   }
 
   &__item-logo {
@@ -27,6 +38,12 @@
       width: 76px;
       height: 76px;
       fill: #6d6d6d;
+    }
+
+    &--white {
+      svg {
+        fill: #fff;
+      }
     }
   }
 

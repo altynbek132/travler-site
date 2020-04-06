@@ -1,0 +1,66 @@
+@import '../helpers/helpers';
+
+.features-2 {
+  position: relative;
+  height: 520px;
+  padding-top: 57px;
+  overflow: hidden;
+  background-color: #222;
+
+  &__container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    padding: 0 60px;
+    transform: translateX(-50%);
+  }
+
+  &__monitor-wrapper {
+    position: relative;
+    max-width: 1255px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+
+    &::after {
+      position: absolute;
+      top: 39.2%;
+      left: 50%;
+      width: 92.1%;
+      height: 68.1%;
+      content: '';
+      background: rgb(54, 0, 124);
+      background: linear-gradient(57deg, rgba(54, 0, 124, 1) 0%, rgba(143, 51, 197, 1) 100%);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__monitor {
+    // height: 50px;
+  }
+
+  &__items {
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 1px #000;
+    letter-spacing: 0.9px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    font-weight: 700;
+    color: #a161db;
+    text-align: center;
+    text-shadow: 0 1px 1px #000;
+    letter-spacing: 0.35px;
+  }
+}

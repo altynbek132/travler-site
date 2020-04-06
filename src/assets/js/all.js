@@ -62,27 +62,31 @@ const scrollSubscribe = () => {
 
 const scrolling = () => {
   const paddingTop = $('.intro__header').height();
-  const handler = function(e) {
+  const handler = function (e) {
     e.preventDefault();
     const id = $(this).attr('href');
     document.body.classList.remove('no-scroll');
     const blockOffset = $(id).offset().top - paddingTop;
-    $('html, body')
-      .animate(
-        {
-          scrollTop: blockOffset,
-        },
-        500,
-      );
+    $('html, body').animate(
+      {
+        scrollTop: blockOffset,
+      },
+      500,
+    );
   };
   $('[data-scroll]').click(handler);
 };
 
-$(document).ready(function() {
+const dev = () => {
+  $('a').on('click', (e) => e.preventDefault());
+};
+
+$(document).ready(function () {
   // fixHeader();
   // headerToggle();
   ibg();
   // slick();
   // scrollSubscribe();
+  dev();
   // scrolling();
 });
