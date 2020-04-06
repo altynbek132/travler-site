@@ -14,13 +14,15 @@ const slick = () => {
     waitForAnimate: false,
     speed: 228,
     dots: true,
+    slidesToShow: 4,
+    slidesToScroll: 2,
     // autoplay: true,
     // autoplaySpeed: 5000,
     // adaptiveHeight: true,
     // fade: true,
     // variableWidth: true,
   };
-  $('.reviews__slider').slick(params);
+  $('.team__slider').slick(params);
 };
 
 const headerToggle = () => {
@@ -85,7 +87,7 @@ $(document).ready(function () {
   // fixHeader();
   // headerToggle();
   ibg();
-  // slick();
+  slick();
   // scrollSubscribe();
   dev();
   // scrolling();
