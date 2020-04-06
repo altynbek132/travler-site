@@ -1,0 +1,139 @@
+@import '../helpers/helpers';
+
+.footer {
+  padding: 30px 0;
+  background-color: #373737;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__col {
+    &--b {
+      flex: 0 1 100%;
+    }
+
+    &--l {
+      flex: 0 1 48%;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 36px;
+
+    svg {
+      fill: #fff;
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #fff;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  &__nav-item {
+    position: relative;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+
+    &:not(:last-child) {
+      &::before {
+        position: absolute;
+        top: 50%;
+        right: -30px;
+        width: 2px;
+        height: 15px;
+        content: '';
+        background-color: #626262;
+        transform: translateY(-50%);
+      }
+    }
+
+    &::after {
+      @include anim;
+
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 0;
+      height: 4px;
+      content: '';
+      background-color: #914dcf;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__social-item {
+    @include anim;
+
+    display: flex;
+    align-items: center;
+    font-family: 'PT Sans';
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+
+    svg {
+      @include anim;
+
+      width: 13px;
+      height: 9px;
+      margin-right: 6px;
+      fill: #fff;
+    }
+
+    &:hover {
+      color: #c28af6;
+
+      svg {
+        fill: #c28af6;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__links-item {
+    @include anim;
+
+    font-size: 12px;
+    color: #fff;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      color: #c28af6;
+    }
+  }
+
+  &__info {
+    font-size: 11px;
+    line-height: 1.5;
+    color: #7e7e7e;
+  }
+}

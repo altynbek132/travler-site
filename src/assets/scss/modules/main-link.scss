@@ -1,0 +1,40 @@
+@import '../helpers/helpers';
+
+.main-link {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 48px;
+    height: 50px;
+  }
+
+  &__content {
+    margin-left: 10px;
+  }
+
+  &__title {
+    font-size: 39px;
+    font-weight: 700;
+    color: #6017a3;
+    background-image: linear-gradient(-38deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    &--white {
+      color: #fff;
+    }
+  }
+
+  &__subtitile {
+    @include font-nav;
+
+    font-size: 12px;
+    font-style: italic;
+    color: #7d7d7d;
+
+    &--white {
+      color: #fff;
+    }
+  }
+}

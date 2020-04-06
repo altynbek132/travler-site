@@ -1,5 +1,9 @@
+@import '../helpers/helpers';
+
 .articles {
   padding-top: 40px;
+  padding-bottom: 35px;
+  border-bottom: 4px solid #914dcf;
 
   .container {
     display: flex;

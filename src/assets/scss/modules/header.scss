@@ -4,36 +4,7 @@
   display: flex;
   justify-content: space-between;
 
-  &__logo {
-    display: flex;
-    align-items: center;
-
-    svg {
-      width: 48px;
-      height: 50px;
-    }
-  }
-
-  &__logo-content {
-    margin-left: 10px;
-  }
-
-  &__logo-title {
-    font-size: 39px;
-    font-weight: 700;
-    color: #6017a3;
-    background-image: linear-gradient(-38deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-
-  &__logo-subtitile {
-    @include font-nav;
-
-    font-size: 12px;
-    font-style: italic;
-    color: #7d7d7d;
-  }
+  &__logo {}
 
   &__nav {
   }
