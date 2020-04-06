@@ -1,0 +1,45 @@
+@import '../helpers/helpers';
+
+.aspects {
+  &__item {
+    position: relative;
+    flex-basis: 33%;
+    padding: 0 14px;
+
+    &:not(:last-child) {
+      &::after {
+        position: absolute;
+        top: 36px;
+        right: -60px;
+        width: 140px;
+        height: 3px;
+        content: '';
+        background-color: #6d6d6d;
+      }
+    }
+  }
+
+  &__item-logo {
+    margin-bottom: 50px;
+    text-align: center;
+
+    svg {
+      width: 76px;
+      height: 76px;
+      fill: #6d6d6d;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 22px;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  &__item-text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+  }
+}

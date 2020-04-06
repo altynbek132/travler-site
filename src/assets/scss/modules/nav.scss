@@ -9,6 +9,7 @@
 
     position: relative;
     display: flex;
+    align-items: center;
     font-size: 12px;
     font-weight: 700;
     color: #c7c7c7;
@@ -16,8 +17,8 @@
     svg {
       @include anim;
 
-      width: 17px;
-      height: 11px;
+      width: 13px;
+      height: 19px;
       fill: #c7c7c7;
     }
 
@@ -45,7 +46,7 @@
         height: 25px;
         pointer-events: none;
         content: '';
-        background-color: #767676;
+        background-color: #c7c7c7;
       }
     }
 
@@ -59,6 +60,7 @@
   }
 
   &__dropdown-img-txt {
+    font-size: 17px;
     font-weight: 700;
     transform: rotate(90deg);
   }
