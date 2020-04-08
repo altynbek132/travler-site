@@ -1,11 +1,13 @@
 @import '../helpers/helpers';
 
 .links {
-  position: relative;
-  z-index: 20;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.16);
+  .container {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.16);
+  }
 
   &__logo {
     margin-bottom: 17px;

@@ -1,17 +1,47 @@
 @import '../helpers/helpers';
 
 .header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
+  @include anim;
 
-  &__logo {}
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: hsla(0, 0%, 92%, 0.965);
+
+  .container {
+    @include anim;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    @include anim;
+  }
 
   &__nav {
+    @include anim;
   }
 
   &__burger {
     display: none;
+  }
+
+  &.fixed {
+    .container {
+    }
+
+    .header__logo {
+      transform: scale(0.9);
+    }
+
+    .nav__input {
+      padding: 15px 20px;
+    }
   }
 
   @media (max-width: $m) {
@@ -19,7 +49,7 @@
       position: absolute;
       top: 20px;
       right: 20px;
-      z-index: 500;
+      z-index: 1000;
       display: block;
       width: 30px;
       height: 20px;
@@ -32,7 +62,7 @@
         width: 100%;
         height: 2px;
         content: '';
-        background-color: pink;
+        background-color: green;
         transition: 0.2s;
       }
 

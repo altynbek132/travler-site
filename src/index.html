@@ -9,8 +9,8 @@
   </head>
   <body>
     <section class="intro">
-      <div class="container intro__header-wrapper">
-        <div class="intro__header header">
+      <div class="intro__header header outer">
+        <div class="container">
           <a href="#" class="header__logo main-link">
             <svg>
               <use href="#logo"></use>
@@ -21,9 +21,9 @@
             </div>
           </a>
 
-          <nav class="header__nav nav">
-            <div class="header__burger"><span></span></div>
+          <div class="header__burger"><span></span></div>
 
+          <nav class="header__nav nav">
             <a href="#" class="nav__item">
               <div class="nav__item-text">
                 Quicklinks
@@ -32,14 +32,34 @@
                 <use xlink:href="assets/images/sprite.svg#map"></use>
               </svg>
             </a>
-            <a href="#" class="nav__item">
-              <div class="nav__item-text">
-                Select from dropdown
-              </div>
-              <div class="nav__dropdown-img-txt">
-                < >
-              </div>
-            </a>
+            
+            <div class="nav__dropdown">
+              <button class="nav__item nav__dropdown-button">
+                <div class="nav__item-text">
+                  Select from dropdown
+                </div>
+                <div class="nav__dropdown-img-txt">
+                  < >
+                </div>
+              </button>
+              <ul class="nav__dropdown-items">
+                <li class="nav__dropdown-item">
+                  <a class="nav__dropdown-link" href="mailto:altynbek.ktl@gmail.com">
+                    <svg>
+                      <use xlink:href="assets/images/sprite.svg#mail"></use>
+                    </svg>
+                    altynbek.ktl@gmail.com</a>
+                </li>
+                <li class="nav__dropdown-item">
+                  <a class="nav__dropdown-link" href="tel:142288">
+                    <svg>
+                      <use xlink:href="assets/images/sprite.svg#tel"></use>
+                    </svg>
+                    142288</a>
+                </li>
+              </ul>
+            </div>
+            
 
             <div class="nav__item">
               <input
@@ -58,8 +78,8 @@
         </div>
       </div>
 
-      <div class="container">
-        <div class="intro__links links">
+      <div class="intro__links links outer">
+        <div class="container">
           <a href="#" class="links__item">
             <div class="links__logo">
               <svg>
@@ -579,6 +599,9 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script async src="./assets/js/all.js"></script>
   </body>

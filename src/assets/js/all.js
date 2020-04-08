@@ -84,11 +84,11 @@ const dev = () => {
 };
 
 $(document).ready(function () {
-  // fixHeader();
+  fixHeader();
   headerToggle();
   ibg();
   slick();
-  // scrollSubscribe();
+  scrollSubscribe();
   dev();
   // scrolling();
 });
