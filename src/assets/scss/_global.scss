@@ -91,3 +91,15 @@ h4 {
   padding: 0;
   margin: 0;
 }
+
+input {
+  &::placeholder {
+    @include anim;
+  }
+
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+}

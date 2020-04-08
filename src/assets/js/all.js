@@ -26,8 +26,8 @@ const slick = () => {
 };
 
 const headerToggle = () => {
-  const burger = $('.intro__burger');
-  const menu = $('.intro__nav');
+  const burger = $('.header__burger');
+  const menu = $('.header__nav');
   const navItem = $('.nav__item');
 
   const handleClose = (e) => {
@@ -85,7 +85,7 @@ const dev = () => {
 
 $(document).ready(function () {
   // fixHeader();
-  // headerToggle();
+  headerToggle();
   ibg();
   slick();
   // scrollSubscribe();

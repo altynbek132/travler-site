@@ -1,11 +1,117 @@
 @import '../helpers/helpers';
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
 
   &__logo {}
 
   &__nav {
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  @media (max-width: $m) {
+    &__burger {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 500;
+      display: block;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        content: '';
+        background-color: pink;
+        transition: 0.2s;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+
+      span {
+        @include center-abs;
+
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: pink;
+        transition: 0.2s;
+      }
+
+      &.active {
+        box-shadow: none;
+
+        span {
+          transform: translateY(-50%) scale(0);
+        }
+
+        &::before {
+          top: 9px;
+          transform: rotate(-45deg);
+        }
+
+        &::after {
+          bottom: 9px;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    // &__nav {
+    //   position: fixed;
+    //   top: 0;
+    //   right: 0;
+    //   z-index: 20;
+    //   flex-direction: column;
+    //   justify-content: space-between;
+    //   width: 100%;
+    //   height: 100%;
+    //   padding-top: 130px;
+    //   padding-bottom: 50px;
+    //   overflow: auto;
+    //   background-color: #e2e5ee;
+    //   transition: 0.3s ease-out;
+    //   // transform: translateY(-100vh);
+    //   clip-path: circle(0 at 94.4% 5.4%);
+
+    //   &.active {
+    //     clip-path: circle(200vh at 94.4% 5.4%);
+    //     // transform: translateY(0);
+    //   }
+    // }
+
+    // &__header.fixed {
+    //   width: 100px;
+
+    //   .intro__nav {
+    //     width: 100px;
+    //   }
+
+    //   .nav__col + .nav__col {
+    //     margin-left: 70px;
+    //   }
+
+    //   .nav__item {
+    //     font-size: 16px;
+    //   }
+    //   // .nav
+    // }
   }
 }
