@@ -29,7 +29,7 @@
   }
 
   &__text {
-    flex: 0 1 48%;
+    flex: 0 0 48%;
     font-size: 12px;
     line-height: 1.5;
     color: #fff;
@@ -37,7 +37,7 @@
 
   &__nav {
     display: flex;
-    flex: 0 1 43%;
+    flex: 0 0 43%;
     justify-content: space-between;
     // margin-bottom: 60px;
   }
@@ -82,7 +82,7 @@
 
   &__social {
     display: flex;
-    flex: 0 1 43%;
+    flex: 0 0 43%;
     align-items: center;
     justify-content: space-between;
   }
