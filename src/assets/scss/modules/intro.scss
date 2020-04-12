@@ -6,6 +6,10 @@
 
   &__header {
     margin-bottom: 35px;
+
+    .container {
+      position: relative;
+    }
   }
 
   &__header-wrapper {
@@ -30,18 +34,22 @@
     height: 138px;
     background-color: #451a4a;
     border-radius: 50%;
-    transform: translate(-50%, -80%);
+    transform: translate(-50%, -120%);
 
     svg {
       width: 53px;
       height: 56px;
       fill: white;
     }
+
+    @media (max-width: $s) {
+      transform: translate(-50%, -80%);
+    }
   }
 
   &__main-photo {
     position: relative;
-    height: 84vh;
+    height: 100vh;
     transform: translateY(-13px);
 
     &::before {

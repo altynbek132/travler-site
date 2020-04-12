@@ -7,22 +7,63 @@ function ibg() {
   }
 }
 
+let isSlicked = false;
+let slickPoint = 0;
+
+const unslick = (item) => item.slick('unslick');
+
 const slick = () => {
+  const teamslider = $('.team__slider');
+  const ww = $(window);
+  const w = ww.outerWidth();
+
+  let slidesToShow = 4;
+  let slidesToScroll = 2;
+
+
+  if (w > 990) {
+    slidesToShow = 4;
+    if (slickPoint !== 0 && slickPoint !== 3) {
+      unslick(teamslider);
+      isSlicked = false;
+    }
+    slickPoint = 3;
+  }
+  else if (w < 991 && w > 767) {
+    slidesToShow = 3;
+    if (slickPoint !== 0 && slickPoint !== 1) {
+      unslick(teamslider);
+      isSlicked = false;
+    }
+    slickPoint = 1;
+  }
+  else if (w < 767) {
+    slidesToShow = 2;
+    if (slickPoint !== 0 && slickPoint !== 2) {
+      unslick(teamslider);
+      isSlicked = false;
+    }
+    slickPoint = 2;
+  }
+
+  if (slidesToShow % 2 === 1) {
+    slidesToScroll = slidesToShow - 2;
+  }
+
   const params = {
     dots: true,
     arrows: false,
     waitForAnimate: false,
     speed: 228,
     dots: true,
-    slidesToShow: 4,
-    slidesToScroll: 2,
-    // autoplay: true,
-    // autoplaySpeed: 5000,
-    // adaptiveHeight: true,
-    // fade: true,
-    // variableWidth: true,
+    slidesToShow,
+    slidesToScroll,
   };
-  $('.team__slider').slick(params);
+
+  if (!isSlicked) {
+    teamslider.slick(params);
+    isSlicked = true;
+  }
 };
 
 const headerToggle = () => {
@@ -34,18 +75,18 @@ const headerToggle = () => {
     e.preventDefault();
     burger.removeClass('active');
     menu.removeClass('active');
-    document.body.classList.remove('no-scroll');
+    // document.body.classList.remove('no-scroll');
   };
 
   const handler = (e) => {
     e.preventDefault();
     burger.toggleClass('active');
     menu.toggleClass('active');
-    document.body.classList.toggle('no-scroll');
+    // document.body.classList.toggle('no-scroll');
   };
 
   burger.click(handler);
-  navItem.click(handleClose);
+  // navItem.click(handleClose);
 };
 
 const header = $('.intro__header');
@@ -56,10 +97,24 @@ const fixHeader = () => {
   if (scrollOffset > 0) header.addClass('fixed');
 };
 
-const scrollSubscribe = () => {
+const scrollSubscribe = (...functions) => {
   $(window).on('scroll', () => {
-    fixHeader();
+    functions.forEach((f) => f());
   });
+};
+
+const resizeSubscribe = (...functions) => {
+  const ww = $(window);
+  ww.resize((e) => {
+    const w = ww.outerWidth();
+    const h = ww.outerHeight();
+    functions.forEach((f) => f(w, h));
+  });
+};
+
+const adaptiveHeader = (w, h) => {
+  const dropItems = $('.nav__dropdown-items');
+  const burger = $('.header__burger');
 };
 
 const scrolling = () => {
@@ -84,11 +139,12 @@ const dev = () => {
 };
 
 $(document).ready(function () {
-  fixHeader();
   headerToggle();
   ibg();
   slick();
-  scrollSubscribe();
+  fixHeader();
+  scrollSubscribe(fixHeader, slick);
+  resizeSubscribe();
   dev();
   // scrolling();
 });

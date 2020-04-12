@@ -3,7 +3,6 @@
 .features-2 {
   position: relative;
   height: 520px;
-  padding-top: 57px;
   overflow: hidden;
   background-color: #222;
 
@@ -12,7 +11,17 @@
     top: 40%;
     left: 50%;
     width: 100%;
-    padding: 0 60px;
+    max-width: 830px;
+    padding: 0 40px;
+    transform: translateX(-50%);
+  }
+
+  &__monitor {
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    width: 100%;
+    width: 830px;
     transform: translateX(-50%);
   }
 
@@ -38,10 +47,6 @@
     }
   }
 
-  &__monitor {
-    // height: 50px;
-  }
-
   &__items {
   }
 
@@ -53,6 +58,8 @@
     text-align: center;
     text-shadow: 0 1px 1px #000;
     letter-spacing: 0.9px;
+
+    @media (max-width: $m) { font-size: 32px; }
   }
 
   &__subtitle {

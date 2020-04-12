@@ -1,8 +1,58 @@
 @import '../helpers/helpers';
 
 .nav {
-  display: flex;
-  align-items: center;
+  @include flex-center;
+
+  @media (max-width: $m) {
+    position: fixed;
+    right: 0;
+    height: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: $m) {
+    & {
+      @include anim;
+
+      top: 0;
+      right: 0;
+      align-items: flex-start;
+      width: 50%;
+      height: 100%;
+      background-color: #ececec;
+      transform: translateX(120%);
+
+      @media (max-width: $s) { width: 100%; }
+
+      &__inner {
+        align-items: flex-start;
+        padding-top: 100px;
+      }
+
+      &.active {
+        transform: translateX(0);
+      }
+
+      &__inner {
+        flex-direction: column-reverse;
+        // height: 100%;
+      }
+
+      &__item {
+        &:not(:last-child) {
+          margin-top: 30px;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
 
   &__item {
     @include anim;

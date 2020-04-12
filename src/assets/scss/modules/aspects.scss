@@ -13,11 +13,16 @@
       &::after {
         position: absolute;
         top: 36px;
-        right: -60px;
-        width: 140px;
+        right: 0;
+        width: 50%;
         height: 3px;
         content: '';
         background-color: #6d6d6d;
+        transform: translateX(50%);
+
+        @media (max-width: $s) {
+          width: 40%;
+        }
       }
     }
 
@@ -27,6 +32,10 @@
           background-color: #fff;
         }
       }
+    }
+
+    @media (max-width: $s) {
+      flex-basis: 50%;
     }
   }
 
@@ -45,11 +54,15 @@
         fill: #fff;
       }
     }
+
+    @media (max-width: $m) {
+      margin-bottom: 26px;
+    }
   }
 
   &__item-title {
     margin-bottom: 22px;
-    font-size: 24px;
+    font-size: 23px;
     color: #fff;
   }
 

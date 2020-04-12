@@ -1,12 +1,27 @@
 @import '../helpers/helpers';
 
 .links {
+  position: relative;
+
+  @media (max-width: $s) {
+    position: static;
+  }
+
   .container {
     position: relative;
     z-index: 20;
     display: flex;
     align-items: center;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.16);
+
+    @media (max-width: $s) {
+      position: absolute;
+      top: 60%;
+      left: 0;
+      flex-direction: column;
+      align-items: stretch;
+      transform: translateY(-50%);
+    }
   }
 
   &__logo {
@@ -18,6 +33,11 @@
       width: 26px;
       height: 26px;
       fill: #7d7d7d;
+    }
+
+    @media (max-width: $s) {
+      margin-right: 5px;
+      margin-bottom: 0;
     }
   }
 
@@ -96,6 +116,12 @@
       .links__text {
         color: #701dbb;
       }
+    }
+
+    @media (max-width: $s) {
+      display: flex;
+      align-items: center;
+      padding: 15px 10px;
     }
   }
 }
