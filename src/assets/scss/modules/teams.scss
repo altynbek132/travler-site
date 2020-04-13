@@ -17,6 +17,14 @@
       height: 2px;
       background-color: #dedede;
       box-shadow: 0 1px 0 #fff;
+
+      @media (max-width: $xs) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $xs) {
+      display: block;
     }
   }
 
@@ -26,6 +34,12 @@
     font-size: 36px;
     font-weight: 400;
     color: #717171;
+
+    @media (max-width: $xs) {
+      margin: 0;
+      font-size: 27px;
+      text-align: center;
+    }
   }
 
   &__subtitle {

@@ -12,6 +12,17 @@
   &__inner {
     display: flex;
     align-items: center;
+
+    @media (max-width: $m) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      padding-top: 100px;
+    }
+
+    @media (max-width: $xs) {
+      align-items: stretch;
+      width: 80%;
+    }
   }
 
   @media (max-width: $m) {
@@ -28,18 +39,8 @@
 
       @media (max-width: $s) { width: 100%; }
 
-      &__inner {
-        align-items: flex-start;
-        padding-top: 100px;
-      }
-
       &.active {
         transform: translateX(0);
-      }
-
-      &__inner {
-        flex-direction: column-reverse;
-        // height: 100%;
       }
 
       &__item {
@@ -188,6 +189,10 @@
       font-size: 12px;
       font-weight: 700;
       color: #aeaeae;
+    }
+
+    @media (max-width: $xs) {
+      width: 100%;
     }
   }
 

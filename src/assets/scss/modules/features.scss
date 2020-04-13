@@ -22,6 +22,11 @@
     color: #fff;
     text-align: center;
     letter-spacing: 0.9px;
+
+    @media (max-width: $xs) {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
   }
 
   &__subtitle {
@@ -37,6 +42,10 @@
     img {
       max-width: 100%;
       margin: 0 auto;
+    }
+
+    @media (max-width: $xs) {
+      margin-bottom: 15px;
     }
   }
 
@@ -61,6 +70,14 @@
 
           .aspects__item-logo {
             margin-bottom: 10px;
+          }
+        }
+
+        @media (max-width: $xs) {
+          flex-basis: 100%;
+
+          &::after {
+            display: none;
           }
         }
       }
@@ -92,5 +109,9 @@
     font-weight: 400;
     line-height: 1.5;
     color: #fff;
+  }
+
+  @media (max-width: $xs) {
+    padding-top: 40px;
   }
 }

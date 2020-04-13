@@ -12,11 +12,17 @@
     align-items: center;
     justify-content: space-between;
 
-    & + & { margin-top: 35px; }
+    & + & {
+      margin-top: 35px;
+    }
 
     &:nth-child(2) {
       align-items: flex-start;
       margin-bottom: 48px;
+    }
+
+    @media (max-width: $s) {
+      align-items: center !important;
     }
   }
 
@@ -33,6 +39,10 @@
     font-size: 12px;
     line-height: 1.5;
     color: #fff;
+
+    @media (max-width: $s) {
+      flex-basis: 68%;
+    }
   }
 
   &__nav {
@@ -40,6 +50,11 @@
     flex: 0 0 400px;
     justify-content: space-between;
     // margin-bottom: 60px;
+    @media (max-width: $s) {
+      flex-basis: auto;
+      flex-direction: column;
+      align-items: flex-end;
+    }
   }
 
   &__nav-item {
@@ -58,6 +73,8 @@
         content: '';
         background-color: #626262;
         transform: translateY(-50%);
+
+        @media (max-width: $s) { display: none; }
       }
     }
 
@@ -71,12 +88,21 @@
       height: 4px;
       content: '';
       background-color: #914dcf;
+
+      @media (max-width: $s) {
+        bottom: -4px;
+      }
     }
 
     &:hover {
       &::after {
         width: 100%;
       }
+    }
+
+    @media (max-width: $s) {
+      margin-bottom: 10px;
+      font-size: 14px;
     }
   }
 
@@ -85,6 +111,14 @@
     flex: 0 0 43%;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: $s) {
+      flex: 0 0 auto;
+      flex-basis: auto;
+      flex-direction: column;
+      align-items: flex-start;
+      order: -1;
+    }
   }
 
   &__social-item {
@@ -113,11 +147,20 @@
         fill: #c28af6;
       }
     }
+
+    @media (max-width: $s) {
+      margin-bottom: 14px;
+    }
   }
 
   &__links {
     display: flex;
     margin-bottom: 23px;
+
+    @media (max-width: $s) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__links-item {
@@ -128,6 +171,11 @@
 
     &:not(:last-child) {
       margin-right: 27px;
+
+      @media (max-width: $s) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
     }
 
     &:hover {
