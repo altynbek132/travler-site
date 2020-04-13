@@ -1,11 +1,10 @@
-# Sample workspace
-### Enabled:
+# Source code of bicycles site
+### Builded via:
 - gulp
 - scss
-- stylelint
+- BEM
+- JS
+- JQuery
+- flex
 
-### Disabled:
-- sprites
-- less
-- stylus
-- pug
+view site: https://altynbek132.github.io/dists/travler/index.html
